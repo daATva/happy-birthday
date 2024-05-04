@@ -36,9 +36,9 @@ function playRandomLooseMusic() {
   randomMusicTrack.play();
   console.log(randomMusicTrack);
 }
-
-startGameMusic();
-
+if (confirm("Это втоооорой?")) {
+  startGameMusic();
+}
 document.addEventListener("touchstart", function (event) {
   jump();
   score++;
