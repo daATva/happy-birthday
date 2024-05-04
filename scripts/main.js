@@ -12,6 +12,9 @@ let kg50Left = parseInt(window.getComputedStyle(kg50).getPropertyValue("left"));
 
 let score = 0;
 
+// Запускаем фоновую музыку при загрузке страницы
+window.addEventListener("load", startGameMusic);
+
 function startGameMusic() {
   gameMusic.play();
 }
@@ -36,11 +39,7 @@ function playRandomLooseMusic() {
   randomMusicTrack.play();
   console.log(randomMusicTrack);
 }
-document.addEventListener("DOMContentLoaded", (event) => {
-  if (confirm("Это втоооорой?")) {
-    startGameMusic();
-  }
-});
+
 document.addEventListener("touchstart", function (event) {
   jump();
   score++;
