@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="vieport" content="1440" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Йоска</title>
+  </head>
+  <body>
+    <div id="game">
+      <div class="game-header">
+        <div class="game-score">
+          <span id="game-score" class="score-count">0</span>
+        </div>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="game-canvas" width="620" height="200"></canvas>
+        <div id="dino">ㅤㅤㅤㅤ</div>
+        <div id="kg50"></div>
+      </div>
+    </div>
+    <div class="game__music">
+      <audio id="gameMusic" loop>
+        <source src="./music/ablak.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="hihiMusic" loop>
+        <source src="./music/hihi.mp3" type="audio/mp3" />
+      </audio>
+      <div class="game__music__loose">
+        <audio id="ghoulMusic" loop>
+          <source src="./music/ghoul.mp3" type="audio/mp3" />
+        </audio>
+        <audio id="otrishkaMusic" loop>
+          <source src="./music/otrishka.mp3" type="audio/mp3" />
+        </audio>
+        <audio id="slabMusic" loop>
+          <source src="./music/slab.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
