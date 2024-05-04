@@ -25,7 +25,7 @@ function stopHihiMusic() {
 }
 
 function playRandomLooseMusic() {
-  const musicTracks = [ghoulMusic, otrishkaMusic, slabMusic];
+  const musicTracks = [ghoulMusic, otrishkaMusic, slabMusic, hihiSound];
 
   musicTracks.forEach((music) => music.pause());
 
@@ -81,16 +81,19 @@ document.addEventListener("touchstart", function (event) {
   }
 });
 
+let isJumping = false;
+
 function jump() {
-  if (dino.classList != "jump") {
+  if (!isJumping) {
     dino.classList.add("jump");
-    playHihiMusic();
+    isJumping = true;
+    playRandomLooseMusic();
   }
   setTimeout(function () {
     dino.classList.remove("jump");
+    isJumping = false;
   }, 300);
 }
-
 let isAlive = setInterval(function () {
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
   let kg50Left = parseInt(
@@ -99,7 +102,6 @@ let isAlive = setInterval(function () {
 
   if (kg50Left < 57 && kg50Left > 40 && dinoTop >= -20) {
     score = 0;
-    playRandomLooseMusic(); // Переместите вызов функции сюда
     alert(
       "Чёт ты не зачекенил, 50 не закрыл. Не баг, а фича если, что за тапы по экрану, тоже дают очки"
     );
