@@ -76,9 +76,9 @@ document.addEventListener("touchstart", function (event) {
       }
     }
 
-    alert(
-      "Кароче мне в падлу , было чёт мутить и чекенить , напиши мне в тг. Если дошёл до сюда . А если сразу нажал на нет . То надо 22 очко набрать . дурак блин!"
-    );
+    if (confirm("Теперь пришло время закрыть 50 . Закрыть ? ")) {
+      window.location.href = "/Joska/clicker.html "; // Путь к вашему файлу clicker.html
+    }
   }
 });
 

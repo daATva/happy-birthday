@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .cont {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        background-color: hsl(0, 0%, 0%);
+      }
+      #esp1,
+      #esp2 {
+        height: 100%;
+        object-fit: fill;
+        transition: all 0.5s;
+      }
+      #esp1 {
+        align-self: flex-end;
+        margin-right: 0px;
+      }
+      #esp2 {
+        align-self: flex-start;
+        margin-left: 0px;
+      }
+      .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 1s;
+        text-align: center;
+        align-content: center;
+        color: black;
+        font-size: 150px;
+      }
+
+      .overlay-hidden {
+        display: none;
+      }
+
+      .overlay-end {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio id="aud">
+      <source src="slabik.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="cont" id="cont">
+      <img src="espc1.png" id="esp1" />
+      <img src="espc2.png" id="esp2" />
+    </div>
+
+    <div class="overlay">
+      С ДР ЙОСИК
+      <div class="images">
+        <img src="./dr.jpeg" alt="" height="300px" />
+      </div>
+      <img src="./joseph.jpg" alt="" width="300px" />
+    </div>
+    <script src="clicker.js"></script>
+
+    <script>
+      document.querySelector(".overlay").onclick = (ev) => {
+        ev.target.classList.add("overlay-hidden");
+        clickerMainloop();
+      };
+    </script>
+  </body>
+</html>
