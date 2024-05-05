@@ -85,6 +85,7 @@ document.addEventListener("touchstart", function (event) {
 let isJumping = false;
 
 function jump() {
+  startGameMusic();
   if (!isJumping) {
     dino.classList.add("jump");
     isJumping = true;
