@@ -13,7 +13,7 @@ function clickerMainloop() {
   });
   esp2.addEventListener("click", (ev) => {
     intensity += 0.13;
-    cwidth -= 26;
+    cwidth -= 27;
     cmargin -= 0.5;
     console.log(cwidth);
   });
