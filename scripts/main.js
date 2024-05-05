@@ -10,7 +10,7 @@ const hihiSound = document.getElementById("hihiMusic");
 
 let kg50Left = parseInt(window.getComputedStyle(kg50).getPropertyValue("left"));
 
-let score = 0;
+let score = 20;
 
 // Запускаем фоновую музыку при загрузке страницы
 window.addEventListener("load", startGameMusic);
@@ -77,7 +77,7 @@ document.addEventListener("touchstart", function (event) {
     }
 
     if (confirm("Теперь пришло время закрыть 50 . Закрыть ? ")) {
-      window.location.href = "/Joska/index.html "; // Путь к вашему файлу clicker.html
+      window.location.href = "/index1.html "; // Путь к вашему файлу clicker.html
     }
   }
 });
