@@ -77,7 +77,7 @@ document.addEventListener("touchstart", function (event) {
     }
 
     if (confirm("Теперь пришло время закрыть 50 . Закрыть ? ")) {
-      window.location.href = "/happy-birthday/index1.html";
+      window.location.href = "/happy-birthday/Joska/index1.html";
     }
   }
 });
