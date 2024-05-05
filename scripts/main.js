@@ -77,7 +77,7 @@ document.addEventListener("touchstart", function (event) {
     }
 
     if (confirm("Теперь пришло время закрыть 50 . Закрыть ? ")) {
-      window.location.href = "/Joska/clicker.html "; // Путь к вашему файлу clicker.html
+      window.location.href = "/Joska/index.html "; // Путь к вашему файлу clicker.html
     }
   }
 });
